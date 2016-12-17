@@ -17,8 +17,7 @@ Check the live <a href="http://cdn.moodgiver.com/utils/moodshop" target="_blank"
 <li>Visual Product Catalog (categories/products) using advanced sliders</li>
 <li>Shopping Cart</li>
 <li>Advanced Framework7 components usage</li>
-<li>m3u standard Playlists manager</li>
-<li>Responsive layout can be used on desktop</li>
+<li>Responsive layout can be used on desktop websites</li>
 </ul>
 
 <h3>Catalog Data</h3>
