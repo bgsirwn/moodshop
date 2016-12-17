@@ -1,0 +1,3 @@
+// this is a local version of the app general settings
+// use a remote public version so you can update your app very easily and get the app up to date
+var categories = [{"description":"","id":1,"image":"http:\/\/cdn.moodgiver.com\/utils\/moodyshopper\/images\/bw.jpg","name":"Blank&White"},{"description":"","id":2,"image":"http:\/\/cdn.moodgiver.com\/utils\/moodyshopper\/images\/beach.jpg","name":"Beach"},{"description":"","id":3,"image":"http:\/\/cdn.moodgiver.com\/utils\/moodyshopper\/images\/panorama.jpg","name":"Panorama"}]

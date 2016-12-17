@@ -1,0 +1,167 @@
+/*
+ * Please see the included README.md file for license terms and conditions.
+ */
+
+
+/* This file is completely optional and not required. */
+/* Note the reference that includes it in the index.html file. */
+
+
+/* Disable certain interactions on touch devices */
+/* SOURCE: https://github.com/ftlabs/fastclick/blob/master/examples/input.html */
+/* LICENSE: https://github.com/ftlabs/fastclick/blob/master/LICENSE */
+
+@font-face {
+	font-family: 'Homenaje';
+	src: local('Homenaje'), local('Homenaje'), url('../fonts/Homenaje-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: "Homenaje";
+    -webkit-touch-callout: none ;
+    -webkit-text-size-adjust: none ; -ms-text-size-adjust: none ;
+    -webkit-user-select: none ; -moz-user-select: none ; -ms-user-select: none ; user-select: none ;
+    -webkit-highlight: none ;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) ;
+    -webkit-tap-highlight-color: transparent ;      /* For some Androids */
+}
+
+/* Recommended for Windows 8 Phone */
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+html {
+    -ms-touch-action: pan-x ;
+}
+
+/* Recommended for Windows 8 Phone */
+/* SOURCE: http://www.excellentwebworld.com/common-problems-solution-for-windows-phone-8-phonegap */
+body {
+    -ms-touch-action: pan-y ;
+    -ms-content-zooming: none ;
+}
+
+/* allow copy-paste */
+input, textarea  {
+    -webkit-user-select: text ; -moz-user-select: text ; -ms-user-select: text ; user-select: text ;
+}
+
+body {
+    /* margin: 0.5rem ; */
+    background: white ;
+    color: black ;
+}
+
+.splash-center {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+
+.splash-bottom {
+    width:100%;
+    text-align:center;
+    bottom:0;
+    margin:auto;
+    position:fixed;
+}
+
+.slide-caption {
+    opacity: 1;
+    position: fixed;
+    left: 0;
+    background: #424141;
+    color: #c6c3c3;
+    padding: 5px;
+    margin: 0 auto;
+    top: 0;
+    width: 40%;
+    font-size: 1.4em;
+    border-bottom-right-radius: 10px;
+}
+
+.panel-left-info {
+    z-index:9999999;
+    background:#4caf50;
+    padding:10px;
+    width:90%;
+    min-width:90%;
+    overflow:hidden;
+}
+
+.panel-right-menu {
+    z-index:9999999;
+    background:#323232;
+    padding:10px;
+    overflow:hidden;
+}
+
+
+.panel-menu { 
+    font-family: "Homenaje";
+    color: #a8a8a8;
+    line-height: 3em;
+    padding-left:5px;
+    border-bottom: 1px solid #454545; 
+}
+
+.panel-menu:hover { 
+    background: #424242;
+}
+
+.popup { z-index:9999999999999999999999999999!important; opacity:.8; background:#000; color:#fff!important; }
+.popup p { color: #fff!important; margin:.4em!important;}
+.full-width { width:100%!important; }
+.big { font-size:1.3em; }
+.w50 { width:50%!important }
+.center { margin:0 auto; }
+.nomargin { margin:0 auto!important; }
+.navbar-logo { max-height: 54px; width:auto; }
+#cart { padding-top:64px; }
+.button-black { background: #000; color:#eaeaea!important; border:0!important; }
+/*.photo-browser.photo-browser-dark .photo-browser-swiper-container { background: #fff!important; }*/
+.photo-browser-captions-dark .photo-browser-caption { font-size:1.3em; }
+.logo-small { max-height: 50px; width:auto; }
+.panel p { font-size:.8em; }
+.cart-btn  { background:transparent!important; color: #000!important; }
+.floating-info { background: #7f887f!important; }
+.notifications { z-index:99999999999999!important; }
+
+
+.slide-title { position:fixed; bottom:0; left:0; color:#eaeaea; padding:5px; z-index:1; }
+
+.swiper-slide { height:100vh!important; }
+ .speed-dial {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1500;
+    width:56px;
+    height:56px;
+    z-index:99999999999!important;
+}
+
+.speed-dial-buttons {
+    position: absolute;
+    width: 40px;
+    left: 50%;
+    margin-left: -18px;
+    bottom: 100%;
+    margin-bottom: 94px!important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -moz-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.speed-dial-buttons i { font-size:1.3em!important; }

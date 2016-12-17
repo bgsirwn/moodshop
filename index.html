@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="icon-fonts/elusive-icons-2.0.0/css/elusive-icons.css">
+        <link rel="stylesheet" type="text/css" href="icon-fonts/font-awesome-4.3.0/css/font-awesome.css">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="framework7/css/framework7.material.colors.min.css" class="uib-framework-theme">
+        <link rel="stylesheet" type="text/css" href="framework7/css/framework7.material.min.css" class="uib-framework-theme">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+        <!--<link rel="stylesheet" type="text/css" href="framework7/css/framework7.material.min.css">
+        <link rel="stylesheet" type="text/css" href="framework7/css/framework7.material.colors.min.css">-->
+        <link rel="stylesheet" type="text/css" href="swiper/css/swiper.min.css">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="framework7/js/framework7.min.js"></script>
+        <script type="application/javascript" src="swiper/js/swiper.min.js"></script>
+        <!-- remote configuration, categories and products -->
+        <script type="application/javascript" src="http://cdn.moodgiver.com/utils/moodyshopper/js/categories.js"></script>
+        <script type="application/javascript" src="http://cdn.moodgiver.com/utils/moodyshopper/js/products.js"></script>
+        <script type="application/javascript" src="http://cdn.moodgiver.com/utils/moodyshopper/js/moodyshopper.js"></script>
+        
+        <script src="js/app.js"></script>
+        
+        
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/fw7_subpage.js"></script>
+        
+    </head>
+
+    <body class="theme-black">
+        <div class="statusbar-overlay"></div>
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <div class="uwrap views">
+            <div class="upage vertical-col left view-main view" id="mainpage">
+                <div class="navbar inner-element theme-black" data-uib="framework7/header" data-ver="0">
+                    <div class="navbar-inner">
+                        <div class="widget-container content-area horiz-area wrapping-col left">
+                                <!--<a href="#" class="link color-black" id="btn-home" style="color:#eaeaea;"><span class="fa fa-home"></span></a>-->
+                            </div>    
+    
+                        <div class="widget-container single-centered full-width">
+                            <div class="widget-container content-area horiz-area wrapping-col nomargin">
+                                <img src="" class="navbar-logo app-logo">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="widget-container content-area horiz-area wrapping-col left">
+                                <a href="#" class="link color-black" id="btn-menu" style="color:#eaeaea;"><span class="fa fa-bars"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="pages">
+                    <div class="page">
+                        <div class="page-content no-navbar upage-content content-area" id="home">
+                            <!-- Slider Categories -->
+                            <div class="swiper-container swiper-categories bg-black" style="top:0px;height:100vh">
+                                <div class="swiper-wrapper categories-wrapper">
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="slide-title"></div>
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class="page-content upage-content content-area hidden" id="products">
+                   
+                            <!-- Slider Products -->
+                            <div class="swiper-container swiper-products bg-black" style="height:100vh">
+                                <div class="swiper-wrapper">
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        
+                       <div id="cart" class="upage-content vertical-col left hidden page-content">
+                            <div class="list-block" style="margin-top:0">
+                                <ul>
+                                <li>
+                                <!-- cart header -->    
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            <span class="table_nr" style="font-size:1.3em">CART</span>    
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                </li>
+                                <!-- cart items -->
+                                <div id="cart-items"></div>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="page-content upage-content content-area hidden" id="shipment">
+                            <div class="list-block" style="margin-top:55px;margin-bottom:600px">
+                                <ul>
+                                <li>
+                                <!-- cart shipment -->    
+                                <div class="item-content">
+                                    
+                                        <div class="item-media">
+                                            <a href="#" class="btn-cart"><span class="fa fa-angle-left" style="font-size:1.3em"></span></a>
+                                        </div>
+                                    <div class="item-inner">    
+                                        <div class="item-title">
+                                            <span style="font-size:1.3em">SHIPPING</span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                    
+                                <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" class="nome" placeholder="Firstname">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+    
+                                <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" class="cognome" placeholder="Lastname">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>    
+                                    
+                                <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" class="indirizzo" placeholder="Address">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>    
+                                    
+                                <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" class="citta" placeholder="City">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>   
+                                    
+                                <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" class="cap" placeholder="ZIP">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li> 
+                                    
+                                <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" class="pv" placeholder="state">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>  
+                                    
+                                <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" class="telefono" placeholder="phone">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li> 
+                                    
+                                <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" class="note" placeholder="notes">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>   
+                                <li class="cart-pay">
+                                    <div class="item-content ">
+                                        <div class="item-inner">
+                                            <div class="item-title" style="width:100%;text-align:center">
+                                                <span class="button button-flat button-fill btn-pay-order" style="font-size:1.3em">CHECKOUT</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>    
+                                
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="page-content upage-content content-area hidden" id="login">
+                            <div class="list-block splash-screen-content" style="margin-top:55px;">
+                            <div class="login-screen-title">    
+                                 <ul>
+                                <li>
+                                <!-- login -->    
+                                <div class="item-content">
+                                    
+                                    <div class="item-inner">    
+                                        <div class="item-title">
+                                            <span style="font-size:1.3em">SIGN-IN</span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                
+                                <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            <span class="button button-flat button-fill btn-facebook-login bg-indigo w50 center"><span class="fa fa-facebook"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>    
+    
+                                 <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            <span class="button button-flat button-fill btn-google-login bg-red w50 center"><span class="fa fa-google"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>      
+
+                                <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <small style="font-size:.5em">If you have an account just sign in</small>
+                                    </div>
+                                </div>
+                                </li>
+     
+                                <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" class="email_login" placeholder="email">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                    
+                                <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="password" class="password_login" placeholder="password">
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                                
+                                <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">
+                                            <span class="button button-flat button-fill w50 btn-password-login center">LOGIN</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>      
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                        
+                       
+                    </div>
+                        
+                </div>
+            </div>
+        </div>
+        
+        <!-- popup info -->
+        <div class="popup popup-info bg-black">
+            <div class="content-block">
+                <div class="widget-container content-area horiz-area wrapping-col">
+                    <img src="" class="app-logo center" style="max-height:48px;width:auto">
+                </div>
+                <div class="popup-content"></div>
+                <p><a href="#" class="close-popup button button-flat button-fill w50 center">Close</a></p>
+            </div>
+        </div>
+        
+         <!-- First, we need to add Panel's overlay that will overlays app while panel is opened -->
+        <div class="panel-overlay"></div>
+ 
+        <!-- Left panel -->
+        <div class="panel panel-left panel-reveal panel-left-info">
+            <div class="info-content">
+            <div class="panel-left-content"></div>
+            <p style="text-align:center"><button class="button button-flat btn-close-panel button-black" data-panel="left">Chiudi</button>
+            </div>    
+        </div>
+ 
+        <!-- Right panel -->
+        <div class="panel panel-right panel-reveal panel-right-menu">
+            <div class="widget-container content-area horiz-area wrapping-col">
+                <img src="" class="app-logo" style="max-height:48px;width:auto">
+            </div>
+            <div class="list-block">
+                <ul>
+                    <a href="#" class="link color-white btn-home" id="btn-home"><li class="panel-menu">SHOP</li></a>    
+                    <a href="#" class="link color-white btn-cart"><li class="panel-menu">CART</li></a>
+                </ul>
+            </div>
+        </div>
+ 
+         
+        <div class="speed-dial">
+            <a href="#" class="floating-button hidden floating-prezzo color-green" data-panel="open-panel"  style="position:fixed;right:16px;bottom:90px;text-align:center;z-index:99999999;" target="_blank">
+                <span class="prezzo-item"></span>
+            </a>
+            <!-- Speed Dial Actions -->
+            <div class="speed-dial-buttons">
+                <a href="#" class="link btn-add-to-cart">
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+                <a href="#" class="link btn-info">
+                    <i class="fa fa-info-circle"></i>
+                </a>
+            </div>
+        </div>
+        
+        
+        <!-- splash-login screen -->
+        <!-- Should be a direct child of BODY -->
+        <div class="login-screen modal-in">
+            <!-- Default view-page layout -->
+            <div class="view">
+                <div class="page">
+                    <!-- page-content has additional login-screen content -->
+                    <div class="page-content splash-screen-content" style="background:#000">
+                        <div class="login-screen-title">
+                            <img src="" class="splash-center app-logo">
+
+                        </div>
+                        <h2 class="color-white splash-bottom"><span class="fa fa-angle-down"></span></h2> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="application/javascript" src="framework7/my-app.js"></script>
+        <!--<script type="application/javascript" src="js/objects.js"></script>-->
+        
+    </body>
+
+</html>
