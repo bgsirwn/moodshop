@@ -1,4 +1,4 @@
-"# moodshop" 
+# moodshop
 
 <p>
 <strong>moodshop</strong> is a mobile ready frontend app developed using HTML5/JS/Framework7 and Intel XDK IDE.
